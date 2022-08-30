@@ -7,16 +7,14 @@
   background-color: #282c34;
   min-height: 100vh;
   color: aliceblue;
-  text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
 .App__header{
+  
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: #525864;
-}
-
-.teste{
-  font-size: smaller;
-  color: aquamarine;
 }

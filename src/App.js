@@ -11,10 +11,10 @@ import './App.css';
 export function App() {
   return (
     <div className="App">
-      <header className="App__header">
-        <FirstComponent className="" />
-      </header>
       <main>
+        <FirstComponent />
+   
+    
         <TemplateExpressions />
         
         <Challenge />

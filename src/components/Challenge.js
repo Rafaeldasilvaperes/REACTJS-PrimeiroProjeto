@@ -8,7 +8,7 @@ export const Challenge = () =>{
 
   return (
     <>
-      <h1>O a = {a} e o b = {b}. Clique no botão para saber a soma dos dois!</h1>
+      <h1>a: {a} + b: {b} -- Clique no botão para saber a soma dos dois!</h1>
       <button onClick={handleSumTwoValues}>Clique para somar!</button>
       
     </>
