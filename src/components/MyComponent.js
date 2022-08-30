@@ -1,7 +1,7 @@
 export const MyComponent = () => {
   return (
     <>
-      <h2>Estou sendo reaproveitado!</h2>
+      <h2>Eu sou o MyComponent e estou sendo reaproveitado!</h2>
     </>
   )
 }
