@@ -1,8 +1,6 @@
-// Components
-import { FirstComponent } from './components/FirstComponent.js';
-import { TemplateExpressions } from './components/TemplateExpressions.js';
-// import { Events } from './components/Events.js';
-import { Challenge } from './components/Challenge.js';
+// IMAGENS
+import CityImg from "./assets/city.jpg";
+
 
 // Styles - CSS (global)
 import './App.css';
@@ -11,14 +9,15 @@ import './App.css';
 export function App() {
   return (
     <div className="App">
-      <main>
-        <FirstComponent />
-   
-    
-        <TemplateExpressions />
-        
-        <Challenge />
-      </main>
+     <h1>Avançando em React</h1>
+     {/* Imagem em Public */}
+     <div>
+      <img src="/nature-react-hero.jpg" alt="Landscape" />
+     </div>
+     {/* Imagem em Assets */}
+     <div>
+        <img src={CityImg} alt="Cidade" />
+     </div>
     </div>
   );
 }

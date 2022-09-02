@@ -7,14 +7,9 @@
   background-color: #282c34;
   min-height: 100vh;
   color: aliceblue;
-  align-items: center;
+  align-items: left;
+  /* padding: 5% 0 0 5%; */
   display: flex;
   flex-direction: column;
 }
-.App__header{
-  
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #525864;
-}
+
