@@ -1,11 +1,13 @@
 // IMAGENS
-import CityImg from "./assets/city.jpg";
+// import CityImg from "./assets/city.jpg";
+
+// Componentes
+import { ManageData } from "./components/ManageData";
+import { ListaRender } from "./components/ListaRender";
 
 
 // Styles - CSS (global)
 import './App.css';
-import { ManageData } from "./components/ManageData";
-
 
 export function App() {
   return (
@@ -20,6 +22,7 @@ export function App() {
         {/* <img src={CityImg} alt="Cidade" /> */}
      </div>
      <ManageData />
+     <ListaRender />
     </div>
   );
 }
