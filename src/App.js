@@ -4,6 +4,7 @@
 // Componentes
 import { ManageData } from "./components/ManageData";
 import { ListaRender } from "./components/ListaRender";
+import { ConditionalRender } from "./components/ConditionalRender";
 
 
 // Styles - CSS (global)
@@ -23,6 +24,7 @@ export function App() {
      </div>
      <ManageData />
      <ListaRender />
+     <ConditionalRender />
     </div>
   );
 }
