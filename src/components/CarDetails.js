@@ -1,8 +1,8 @@
-export const CarDetails = ({brand, km, color, newCar }) => {
+export const CarDetails = ({brand, km, color, newCar, id }) => {
 
   return (
     <div>
-      <h2>Detalhes do Carro:</h2>
+      <h2>Detalhes do Carro {id}:</h2>
       <ul>
         <li>Marca: {brand}</li>
         <li>KM: {km}</li>
