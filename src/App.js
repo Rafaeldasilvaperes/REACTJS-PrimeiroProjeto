@@ -5,16 +5,18 @@
 // import { ManageData } from "./components/ManageData";
 // import { ListaRender } from "./components/ListaRender";
 // import { ConditionalRender } from "./components/ConditionalRender";
-import {ShowUserName} from "./components/ShowUserName";
+// import {ShowUserName} from "./components/ShowUserName";
+import { CarDetails } from "./components/CarDetails";
 
 // Styles - CSS (global)
 import './App.css';
-import { useState } from "react";
+// import { useState } from "react";
+
 
 
 export function App() {
-  const name = "Joaquim de forma Dinâmica";
-  const [userName] = useState("Maria com useState");
+  // const name = "Joaquim de forma Dinâmica";
+  // const [userName] = useState("Maria com useState");
 
   return (
     <div className="App">
@@ -30,9 +32,12 @@ export function App() {
      {/* <ManageData />
      <ListaRender /> */}
      {/* <ConditionalRender /> */}
-     <ShowUserName nome="Rafael direto no comp." />
+     {/* props */}
+     {/* <ShowUserName nome="Rafael direto no comp." />
      <ShowUserName nome={name} />
-     <ShowUserName nome={userName} />
+     <ShowUserName nome={userName} /> */}
+     {/* destructuring */}
+     <CarDetails brand="VW" km={10000} color="Red"/>
     </div>
   );
 }
