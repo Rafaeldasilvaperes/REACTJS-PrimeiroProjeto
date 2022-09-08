@@ -1,4 +1,4 @@
-export const CarDetails = ({brand, km, color}) => {
+export const CarDetails = ({brand, km, color, newCar }) => {
 
   return (
     <div>
@@ -8,6 +8,7 @@ export const CarDetails = ({brand, km, color}) => {
         <li>KM: {km}</li>
         <li>Cor: {color}</li>
       </ul>
+      {newCar && <p>Este carro é novo!</p>}
     </div>
   )
 }

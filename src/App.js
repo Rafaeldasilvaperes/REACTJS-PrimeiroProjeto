@@ -37,7 +37,10 @@ export function App() {
      <ShowUserName nome={name} />
      <ShowUserName nome={userName} /> */}
      {/* destructuring */}
-     <CarDetails brand="VW" km={10000} color="Red"/>
+     {/* <CarDetails brand="VW" km={10000} color="Red"/> */}
+     {/* reaproveitando */}
+     <CarDetails brand="Ford" color="Vermelha" km={0} newCar={true}/>
+     <CarDetails brand="Fiat" color="Azul" km={3000} newCar={false} />
     </div>
   );
 }
