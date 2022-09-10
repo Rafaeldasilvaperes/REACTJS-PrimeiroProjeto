@@ -8,9 +8,11 @@
 // import {ShowUserName} from "./components/ShowUserName";
 // import { CarDetails } from "./components/CarDetails";
 import { Fragment } from './components/Fragment';
+import { Container } from './components/Container';
 
 // Styles - CSS (global)
 import './App.css';
+
 
 // import { useState } from "react";
 
@@ -60,6 +62,13 @@ export function App() {
        /> 
      ))} */}
      <Fragment propsFragment="TESTE"/>
+     <hr />
+     {/* children */}
+     <Container myValue="testing">
+      <p>E este é o conteúdo 1</p>
+      <p>E este é o conteúdo 2</p>
+      <p>E este é o conteúdo 3</p>
+     </Container>
     </div>
   );
 }
