@@ -13,9 +13,11 @@
 // Styles - CSS (global)
 import './App.css';
 import { ExecuteFunction } from './components/ExecuteFunction';
+import { Message } from './components/Message';
 
 
-// import { useState } from "react";
+import { useState } from "react";
+import { ChangeMessageState } from './components/ChangeMessageState';
 
 
 
@@ -31,6 +33,11 @@ export function App() {
 
   function showMessage(){
     console.log("Executando função do pai!")
+  }
+
+  const [message, setMessage] = useState("");
+  const handleMessage = (msg) => {
+    setMessage(msg);
   }
 
   return (
@@ -77,6 +84,9 @@ export function App() {
      </Container> */}
      {/* executar função */}
      <ExecuteFunction myFunction={showMessage}/>
+     {/* state lift */}
+     <Message msg={message} />
+     <ChangeMessageState handleMessage={handleMessage}/>
     </div>
   );
 }
