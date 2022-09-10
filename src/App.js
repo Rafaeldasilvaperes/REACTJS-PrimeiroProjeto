@@ -7,11 +7,12 @@
 // import { ConditionalRender } from "./components/ConditionalRender";
 // import {ShowUserName} from "./components/ShowUserName";
 // import { CarDetails } from "./components/CarDetails";
-import { Fragment } from './components/Fragment';
-import { Container } from './components/Container';
+// import { Fragment } from './components/Fragment';
+// import { Container } from './components/Container';
 
 // Styles - CSS (global)
 import './App.css';
+import { ExecuteFunction } from './components/ExecuteFunction';
 
 
 // import { useState } from "react";
@@ -27,6 +28,10 @@ export function App() {
   //   {id: 3, brand: "Ford", color: "Prata", newCar: false, km: 3540},
   //   {id: 4, brand: "Crysler", color: "Preta", newCar: true, km: 0}
   // ];
+
+  function showMessage(){
+    console.log("Executando função do pai!")
+  }
 
   return (
     <div className="App">
@@ -54,6 +59,7 @@ export function App() {
      {/* loop */}
      {/* {cars.map((car)=>(
       <CarDetails 
+        key={car.id}
         id={car.id}
         brand={car.brand} 
         color={car.color} 
@@ -61,14 +67,16 @@ export function App() {
         newCar={car.newCar}
        /> 
      ))} */}
-     <Fragment propsFragment="TESTE"/>
+     {/* <Fragment propsFragment="TESTE"/> */}
      <hr />
      {/* children */}
-     <Container myValue="testing">
+     {/* <Container myValue="testing">
       <p>E este é o conteúdo 1</p>
       <p>E este é o conteúdo 2</p>
       <p>E este é o conteúdo 3</p>
-     </Container>
+     </Container> */}
+     {/* executar função */}
+     <ExecuteFunction myFunction={showMessage}/>
     </div>
   );
 }
