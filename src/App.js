@@ -18,6 +18,7 @@ import { Message } from './components/Message';
 
 import { useState } from "react";
 import { ChangeMessageState } from './components/ChangeMessageState';
+import { UserDetails } from './components/UserDetails';
 
 
 
@@ -39,6 +40,12 @@ export function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   }
+
+  const userData = [
+    {name: "Rafael", age: 30, occupation: "Coffee drinker", id: 1},
+    {name: "Renato", age: 15, occupation: "Overwatch loser", id: 2},
+    {name: "Rodrigo", age: 32, occupation: "Professional Farter", id: 3}
+  ]
 
   return (
     <div className="App">
@@ -87,6 +94,17 @@ export function App() {
      {/* state lift */}
      <Message msg={message} />
      <ChangeMessageState handleMessage={handleMessage}/>
+     <hr/>
+     <h3>Nossos usuários podem dirigir?</h3>
+     {userData.map((user)=>(
+      <UserDetails  
+        key={user.id}
+        name={user.name}
+        age={user.age}
+        occupation={user.occupation}
+      />
+     ))}
+     
     </div>
   );
 }
