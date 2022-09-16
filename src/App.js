@@ -13,11 +13,13 @@
 // Styles - CSS (global)
 import './App.css';
 import { MyComponentCSSLesson } from './components/MyComponentCSSLesson';
+
 // import { ExecuteFunction } from './components/ExecuteFunction';
 // import { Message } from './components/Message';
 
 
 import { useState } from "react";
+import { CSSModules } from './components/CSSModules';
 // import { ChangeMessageState } from './components/ChangeMessageState';
 // import { UserDetails } from './components/UserDetails';
 
@@ -134,8 +136,9 @@ export function App() {
       {/* CLASSES DINÂMICAS NO CSS */}
       <h3 className={redTitle ? "red-title" : "green-title"}>This title will use Dinamic Class!</h3>
 
-      {/* CSS MODULES ☺ */}
-      
+      {/* CSS MODULES ☺ THE ONE TO BE USED /o/*/}
+      <CSSModules />
+      <h2 className='my_title'>Testing the same class name but out of component</h2>
 
     </div>
   );
