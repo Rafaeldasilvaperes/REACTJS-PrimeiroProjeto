@@ -12,13 +12,14 @@
 
 // Styles - CSS (global)
 import './App.css';
-import { ExecuteFunction } from './components/ExecuteFunction';
-import { Message } from './components/Message';
+import { MyComponentCSSLesson } from './components/MyComponentCSSLesson';
+// import { ExecuteFunction } from './components/ExecuteFunction';
+// import { Message } from './components/Message';
 
 
 import { useState } from "react";
-import { ChangeMessageState } from './components/ChangeMessageState';
-import { UserDetails } from './components/UserDetails';
+// import { ChangeMessageState } from './components/ChangeMessageState';
+// import { UserDetails } from './components/UserDetails';
 
 
 
@@ -32,20 +33,24 @@ export function App() {
   //   {id: 4, brand: "Crysler", color: "Preta", newCar: true, km: 0}
   // ];
 
-  function showMessage(){
-    console.log("Executando função do pai!")
-  }
+  // function showMessage(){
+  //   console.log("Executando função do pai!")
+  // }
 
-  const [message, setMessage] = useState("");
-  const handleMessage = (msg) => {
-    setMessage(msg);
-  }
+  // const [message, setMessage] = useState("");
+  // const handleMessage = (msg) => {
+  //   setMessage(msg);
+  // }
 
-  const userData = [
-    {name: "Rafael", age: 30, occupation: "Coffee drinker", id: 1},
-    {name: "Renato", age: 15, occupation: "Overwatch loser", id: 2},
-    {name: "Rodrigo", age: 32, occupation: "Professional Farter", id: 3}
-  ]
+  // const userData = [
+  //   {name: "Rafael", age: 30, occupation: "Coffee drinker", id: 1},
+  //   {name: "Renato", age: 15, occupation: "Overwatch loser", id: 2},
+  //   {name: "Rodrigo", age: 32, occupation: "Professional Farter", id: 3}
+  // ]
+
+  const n = 5;
+  const [name] = useState("Roger");
+  const redTitle = false;
 
   return (
     <div className="App">
@@ -90,12 +95,13 @@ export function App() {
       <p>E este é o conteúdo 3</p>
      </Container> */}
      {/* executar função */}
-     <ExecuteFunction myFunction={showMessage}/>
+     {/* <ExecuteFunction myFunction={showMessage}/> */}
      {/* state lift */}
-     <Message msg={message} />
+     {/* <Message msg={message} />
      <ChangeMessageState handleMessage={handleMessage}/>
-     <hr/>
-     <h3>Nossos usuários podem dirigir?</h3>
+     <hr/> */}
+     {/* Exercício 4 */}
+     {/* <h3>Nossos usuários podem dirigir?</h3>
      {userData.map((user)=>(
       <UserDetails  
         key={user.id}
@@ -103,8 +109,34 @@ export function App() {
         age={user.age}
         occupation={user.occupation}
       />
-     ))}
-     
+     ))} */}
+     {/* Avançando no CSS */}
+      {/* CSS GLOBAL */}
+      <h2>React com CSS</h2>
+      <p>This is the paragraph out in the app</p>
+      {/* CSS NO COMPONENTE */}
+      <MyComponentCSSLesson />
+      {/* CSS INLINE */}
+      <p style={{
+        color: "greenyellow",
+        padding: "25px", 
+        marginTop: "5px",
+        borderTop: "2px solid greenyellow", 
+        borderBottom: "2px solid greenyellow", 
+        backgroundColor: "lightblue"
+        }}>
+        This element was styled with INLINE CSS
+      </p>
+      {/* CSS INLINE DINÂMICO */}
+      <h2 style={{color: "lightblue"}}>CSS Dinâmico:</h2>
+      <h3 style={n < 10 ? ({color: "greenyellow"}) : ({color: "tomato"})}>Less than 5 Green; More than 5 Reddish;</h3>
+      <h3 style={name === "Rafael"  ? ({color: "greenyellow"}) : ({color: "tomato"})}>{name}</h3>
+      {/* CLASSES DINÂMICAS NO CSS */}
+      <h3 className={redTitle ? "red-title" : "green-title"}>This title will use Dinamic Class!</h3>
+
+      {/* CSS MODULES ☺ */}
+      
+
     </div>
   );
 }
