@@ -59,7 +59,8 @@ export function App() {
       {id: 1, brand: "Ferrari", color: "Amarela", newCar: true, km: 0},
       {id: 2, brand: "VW", color: "Preto", newCar: false, km: 5000},
       {id: 3, brand: "Ford", color: "Prata", newCar: false, km: 3540},
-      {id: 4, brand: "Crysler", color: "Preta", newCar: true, km: 0}
+      {id: 4, brand: "Crysler", color: "Preta", newCar: true, km: 0},
+      {id: 5, brand: "Fiat", color: "Azul", newCar: false, km: 57890}
     ];
 
   return (
@@ -150,7 +151,7 @@ export function App() {
       {/* Exercício 5 */}
       <h2 className='exercicio5__titulo'>Exercício 5</h2>
       <h3>Carros:</h3>
-      <ul>
+      <ul className='exercicio5__listaCards'>
         {coolestCars.map((car) => (
           <MoreCars 
             key={car.id}
