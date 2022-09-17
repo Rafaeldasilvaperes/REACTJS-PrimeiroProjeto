@@ -1,0 +1,13 @@
+.lista{
+  list-style: none;
+  margin-block: 15px;
+}
+.lista h4:not(:first-child){
+  color: brown;
+}
+.lista h4:first-child{
+  color: gold;
+}
+.lista span{
+  color: white;
+}

@@ -20,6 +20,7 @@ import { MyComponentCSSLesson } from './components/MyComponentCSSLesson';
 
 import { useState } from "react";
 import { CSSModules } from './components/CSSModules';
+import { MoreCars } from './components/MoreCars';
 // import { ChangeMessageState } from './components/ChangeMessageState';
 // import { UserDetails } from './components/UserDetails';
 
@@ -53,6 +54,13 @@ export function App() {
   const n = 5;
   const [name] = useState("Roger");
   const redTitle = false;
+
+  const coolestCars = [
+      {id: 1, brand: "Ferrari", color: "Amarela", newCar: true, km: 0},
+      {id: 2, brand: "VW", color: "Preto", newCar: false, km: 5000},
+      {id: 3, brand: "Ford", color: "Prata", newCar: false, km: 3540},
+      {id: 4, brand: "Crysler", color: "Preta", newCar: true, km: 0}
+    ];
 
   return (
     <div className="App">
@@ -139,6 +147,23 @@ export function App() {
       {/* CSS MODULES ☺ THE ONE TO BE USED /o/*/}
       <CSSModules />
       <h2 className='my_title'>Testing the same class name but out of component</h2>
+      {/* Exercício 5 */}
+      <h2 className='exercicio5__titulo'>Exercício 5</h2>
+      <h3>Carros:</h3>
+      <ul>
+        {coolestCars.map((car) => (
+          <MoreCars 
+            key={car.id}
+            id={car.id}
+            brand={car.brand} 
+            color={car.color} 
+            km={car.km} 
+            newCar={car.newCar}
+          />
+        ))}
+      </ul>
+      
+      
 
     </div>
   );

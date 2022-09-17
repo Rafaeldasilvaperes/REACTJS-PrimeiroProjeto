@@ -1,8 +1,9 @@
 body{
   margin: 0;
-  padding: 0;
+  padding: 30px;
   font-family: Helvetica, sans-serif;
   padding-bottom: 20%;
+  background-color: #282c34;
 }
 
 h2{
@@ -18,4 +19,9 @@ h2{
   color: yellowgreen;
   background-color: green;
   margin-top: 15px;
+}
+.exercicio5__titulo{
+  margin-block: 10px;
+  color: #282c34;
+  background-color: rgb(174, 207, 207);
 }
