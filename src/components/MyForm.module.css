@@ -1,0 +1,38 @@
+form {
+  width: 500px;
+  margin: 0;
+  text-align: left;
+}
+
+input,
+textarea, 
+select{
+  display: block;
+  margin-block: 10px;
+}
+input[type=submit]{
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  background-color: rgb(53, 143, 192);
+}
+input[type=submit]:hover{
+  background-color: rgb(29, 168, 243);
+  cursor: pointer;
+}
+input[type=submit]:active{
+  color: rgb(29, 168, 243);
+  background-color: white;
+  transform: scale(0.9);
+}
+input[type=text],
+input[type=email]{
+  padding: 4px 5px;
+  font-size: large;
+}
+textarea{
+  padding: 4px 5px;
+  font-size: 15px;
+}
