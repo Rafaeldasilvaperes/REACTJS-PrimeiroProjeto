@@ -1,0 +1,12 @@
+.start{
+  font-size: var(--fs-h1);
+}
+.start h1{
+  margin: 80px 0 30px 0;
+  color: var(--color-main-orange);
+}
+.start p{
+  font-size: var(--fs-p);
+  margin-bottom: 1em;
+  color: white;
+}

@@ -1,4 +1,5 @@
 import './App.css';
+import { StartScreen } from './components/startScreen/StartScreen.js';
 
 // components
 
@@ -8,7 +9,7 @@ import './App.css';
 export function App() {
   return (
     <div className="App">
-      <h1>Secret Word</h1>
+      <StartScreen />
      
     </div>
   );

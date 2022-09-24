@@ -5,15 +5,10 @@
 
 .App {
   /* background-color: #282c34; */
-  min-height: 100vh;
-  color: aliceblue;
-  align-items: left;
-  font-size: 26px;
-  /* padding: 5% 0 0 5%; */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.App hr{
-  margin-block: 15px;
-}
