@@ -1,9 +1,9 @@
 import styles from './Game.module.css'
 
-export const Game = () => {
+export const Game = ({verifyLetterProps}) => {
   return (
     <>
-    
+      <button onClick={verifyLetterProps}>Voltar</button>
     </>
   )
 }
