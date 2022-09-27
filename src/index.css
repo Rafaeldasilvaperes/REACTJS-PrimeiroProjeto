@@ -24,9 +24,10 @@ button{
   border-radius: 500px;
   padding: 15px 15px;
   font-weight: 1.2em;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: .4s;
+  transition: .3s;
 }
 button:hover{
   background-color: var(--color-main-hover-orange);
