@@ -21,10 +21,10 @@ button{
   background-color: var(--color-main-orange);
   color: white;
   border: 2px solid white;
-  border-radius: 500px;
-  padding: 15px 15px;
+  border-radius: 800px;
+  padding: 13px 35px;
   font-weight: 1.2em;
-  font-size: 0.7em;
+  font-size: 1.7rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: .3s;
