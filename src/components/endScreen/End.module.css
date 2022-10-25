@@ -1,0 +1,25 @@
+.main_container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main_h1{
+  margin-bottom: 20px;
+  font-size: calc(16px + 10 * ((100vw - 320px) / 100));
+}
+
+.main_h2{
+  
+}
+
+.main_h2 span{
+  color: yellowgreen;
+  font-size: larger;
+}
+
+.main_button{
+
+}

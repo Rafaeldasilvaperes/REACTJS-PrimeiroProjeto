@@ -20,16 +20,19 @@ const stages = [
 
 export function App() {
   // useStates
-  const [gameStage, setGameStage] = useState(stages[0].name);
+
+  const GUESSES_QANTITY = 3;
+  const [gameStage, setGameStage] = useState(stages[2].name);
   const [words] = useState(wordsList);
   const [pickedWord, setPickedWord] = useState("");
   const [pickedCategory, setPickedCategory] = useState("");
   const [letters, setLetters] = useState([]);
   const [guessedLetters, setguessedLetters] = useState([]);
   const [wrongLetters, setwrongLetters] = useState([]);
-  const [guesses, setGuesses] = useState(3);
+  const [guesses, setGuesses] = useState(GUESSES_QANTITY);
   const [score, setScore] = useState(0);
 
+  
 
   // functions
   const pickWordAndCategory = () => {
@@ -71,7 +74,6 @@ export function App() {
     if(guessedLetters.includes(normalizedLetter) || wrongLetters.includes(normalizedLetter)){
       return;
     }
-
     // push guessed letter or remove a guess
     if(letters.includes(normalizedLetter)){
       setguessedLetters((actualguessedLetters) => [
@@ -83,13 +85,31 @@ export function App() {
         ...actualwrongLetters,
         normalizedLetter
       ])
+
+      setGuesses((actualGuesses) => actualGuesses - 1)
     }
   };
+
+  const clearLetterStates = () => {
+    setguessedLetters([]);
+    setwrongLetters([]);
+  }
+
+  useEffect(() => {
+    if(guesses <= 0){
+      clearLetterStates();
+      setGameStage(stages[2].name)
+    }
+  }, [guesses])
+
   console.log("Adivinhadas",guessedLetters)
   console.log("Erradas",wrongLetters)
 
   // return home screen
   const restart = () => {
+    setScore(0);
+    setGuesses(GUESSES_QANTITY);
+
     setGameStage(stages[0].name)
   }
 
@@ -107,7 +127,7 @@ export function App() {
         guesses={guesses} 
         score={score}
       />}
-      {gameStage === 'end' && <End restartProps={restart} />}
+      {gameStage === 'end' && <End restartProps={restart} score={score}/>}
      
     </div>
   );
