@@ -1,3 +1,7 @@
+:root{
+  --font-size-responsive: calc(16px + 10 * ((100vw - 320px) / 100));
+}
+
 .main_container{
   display: flex;
   flex-direction: column;
@@ -8,18 +12,19 @@
 
 .main_h1{
   margin-bottom: 20px;
-  font-size: calc(16px + 10 * ((100vw - 320px) / 100));
+  font-size: clamp(20px, 12vw, 100px);
 }
 
 .main_h2{
-  
+  font-size: clamp(10px, 7vw ,30px);
 }
 
 .main_h2 span{
   color: yellowgreen;
-  font-size: larger;
+  
 }
 
 .main_button{
-
+  font-size: clamp(10px, 4vw ,30px);
+  font-weight: 600;
 }
